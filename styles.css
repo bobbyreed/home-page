@@ -1,0 +1,124 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: #1f2937;
+}
+
+.header{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: #1f2937;
+    font-size: 24px;
+    color: #f9faf8;
+}
+
+.middle{
+    display:flex;
+    flex-direction: column;
+}
+
+.block{
+    display:block;
+}
+
+.top-body{
+    display: flex;
+    background-color: #1f2937;
+    font-size: 48px;
+    color: #f9faf8;
+    font-weight: 900;
+    margin: 100px;
+}
+
+.mid-top-body{
+    background-color: #f9faf8;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left:300px;
+    margin-right:300px;
+}
+
+.card{
+    display: flex;
+    flex-flow:column wrap;
+    outline:auto;
+    outline-color: #3882f6;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.mid-bottom-body{
+    background-color: #E5E7EB;
+}
+
+blockquote{
+    font-size: 36px;
+    font-style:italic;
+    font-weight: lighter;
+    color: #1f2937;
+    margin-left:350px;
+    margin-right:350px;
+}
+
+.bottom-body{
+    background-color: #f9faf8;
+}
+
+.blueBox{
+    font-size: 24px;
+    color: #f9faf8;
+    font-weight: 900;
+    background-color: #3882f6;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9faf8;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 18px;
+    padding: 10px;
+}
+
+p {
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+button {
+    background-color: #3882f6;
+    color: #E5E7EB;
+    border-radius: 5px;
+    border: 10px;
+    padding: 5px 10px;
+}
+
+.sign-up{
+    display: flex;
+    outline: auto;
+    outline-color: #f9faf8;
+    justify-self: right;
+}
