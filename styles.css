@@ -73,6 +73,10 @@ blockquote{
 }
 
 .blueBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     font-size: 24px;
     color: #f9faf8;
     font-weight: 900;
@@ -82,10 +86,8 @@ blockquote{
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 5px;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 50px 100px;
+    gap: 20px;
 }
 
 .footer{
@@ -121,4 +123,27 @@ button {
     outline: auto;
     outline-color: #f9faf8;
     justify-self: right;
+}
+
+.socials{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 25px;
+}
+
+.social{
+    align-items: center;
+    display: flex;
+    outline: auto;
+    outline-color: #f9faf8;
+    justify-self: center;
+}
+
+.image {
+    display: block;
+    flex-direction: column wrap;
+    font-size: 11px;
+    margin-right:100px;
+
 }
