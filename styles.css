@@ -49,10 +49,12 @@ body{
 .card{
     display: flex;
     flex-flow:column wrap;
-    outline:auto;
+    outline-style:dotted;
+    outline-width: 7px;
     outline-color: #3882f6;
     align-items: center;
-    margin-bottom: 30px;
+    margin: 0px 10px 30px 10px;
+    
 }
 
 .mid-bottom-body{
@@ -145,5 +147,6 @@ button {
     flex-direction: column wrap;
     font-size: 11px;
     margin-right:100px;
+    border-radius: 10%;
 
 }
