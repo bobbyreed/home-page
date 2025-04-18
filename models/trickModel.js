@@ -10,8 +10,3 @@ async function getTricks() {
     console.error('Error reading tricks data:', error);
 }
 }
-
-async function getTrickById(id) {
-  const tricks = await getTricks();
-  return tricks.find(trick => trick.id === id);
-}
