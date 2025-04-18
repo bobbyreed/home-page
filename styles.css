@@ -150,3 +150,12 @@ button {
     border-radius: 10%;
 
 }
+
+a.button{
+    padding: 1px 6px;
+    border: 1px outset #f9faf8;
+    border-radius: 5px;
+    background-color: #3882f6;
+    color: #E5E7EB;
+    text-decoration: none;
+}
