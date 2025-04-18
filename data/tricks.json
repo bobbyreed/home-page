@@ -1,0 +1,31 @@
+{
+    "tricks": [
+        {
+            "id": 0,
+            "name": "Ollie",
+            "description": "A fundamental skateboarding trick where the rider leaps into the air with the board.",
+            "videoUrl": "",
+            "difficulty": 1,
+            "type": "Flatground",
+            "landed": false
+        },
+        {
+            "id": 1,
+            "name": "Kickflip",
+            "description": "A trick where the rider flips the board 360 degrees along the axis that extends from the nose to the tail.",
+            "videoUrl": "",
+            "difficulty": 2,
+            "type": "Flatground",
+            "landed": false
+        },
+        {
+            "id": 2,
+            "name": "Heelflip",
+            "description": "Similar to the kickflip, but the rider uses their heel to flip the board.",
+            "videoUrl": "",
+            "difficulty": 2,
+            "type": "Flatground",
+            "landed": false
+        }
+    ]
+}

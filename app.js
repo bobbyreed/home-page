@@ -1,0 +1,1 @@
+import Trick from "./components/trick";
