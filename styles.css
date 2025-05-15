@@ -1,35 +1,53 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    background-color: #1f2937;
+/* Base styles that work with Modern Normalize */
+:root {
+  --dark-bg: #1f2937;
+  --light-text: #f9faf8;
+  --secondary-text: #E5E7EB;
+  --accent-blue: #3882f6;
 }
 
-.header{
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    background-color: #1f2937;
-    font-size: 24px;
-    color: #f9faf8;
+/* Reset box-sizing for all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.middle{
-    display:flex;
-    flex-direction: column;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  background-color: var(--dark-bg);
+  font-family: 'Roboto', system-ui, sans-serif; /* System font fallbacks */
+  line-height: 1.6; /* Improved readability */
 }
 
-.block{
-    display:block;
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background-color: var(--dark-bg);
+  font-size: 24px;
+  color: var(--light-text);
+  padding: 1rem; /* Add consistent padding */
 }
 
-.top-body{
-    display: flex;
-    background-color: #1f2937;
-    font-size: 48px;
-    color: #f9faf8;
-    font-weight: 900;
-    margin: 100px;
+.middle {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Take remaining space */
+}
+
+.block {
+  display: block;
+}
+
+.top-body {
+  display: flex;
+  background-color: var(--dark-bg);
+  font-size: 48px;
+  color: var(--light-text);
+  font-weight: 900;
+  margin: 100px;
 }
 
 .mid-top-body{
@@ -158,4 +176,61 @@ a.button{
     background-color: #3882f6;
     color: #E5E7EB;
     text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-text);
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.2s ease; /* Smooth hover effect */
+}
+
+a:hover, a:focus {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+button, .button {
+  background-color: var(--accent-blue);
+  color: var(--secondary-text);
+  border-radius: 5px;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover, .button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .top-body {
+    flex-direction: column;
+    margin: 20px;
+  }
+  
+  blockquote {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .blueBox {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+  }
 }
