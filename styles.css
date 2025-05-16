@@ -1,67 +1,233 @@
-body{
+/* --------------------------------------
+ * BOBBY REED PERSONAL WEBSITE STYLES
+ * Last updated: May 15, 2025
+ * --------------------------------------
+ */
+
+/* --------------------------------------
+ * GLOBAL STYLES
+ * --------------------------------------
+ */
+body {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     background-color: #1f2937;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
-.header{
+/* Container for consistent section widths */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Generic text styling */
+p {
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* --------------------------------------
+ * HEADER STYLES
+ * --------------------------------------
+ */
+.header {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     background-color: #1f2937;
     font-size: 24px;
     color: #f9faf8;
+    padding: 20px 0;
 }
 
-.middle{
-    display:flex;
+.header .links {
+    display: flex;
+    gap: 10px;
+}
+
+/* --------------------------------------
+ * MAIN CONTENT SECTIONS
+ * --------------------------------------
+ */
+.middle {
+    display: flex;
     flex-direction: column;
     color: aliceblue;
 }
 
-.block{
-    display:block;
+.block {
+    display: block;
 }
 
-.top-body{
+/* Top hero section */
+.top-body {
     display: flex;
     background-color: #1f2937;
     font-size: 48px;
     color: #f9faf8;
     font-weight: 900;
-    margin: 100px;
+    margin: 100px 0;
 }
 
-.mid-top-body{
+.top-body h1 {
+    margin-top: 0;
+}
+
+/* "I like to..." section with cards */
+.mid-top-body {
     background-color: #f9faf8;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.mid-top-body h1 {
+    color: #1f2937;
+    margin-bottom: 40px;
+}
+
+/* Quote section */
+.mid-bottom-body {
+    background-color: #E5E7EB;
+    padding: 50px 0;
+}
+
+blockquote {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    color: #1f2937;
+    margin: 0 auto;
+    max-width: 800px;
     text-align: center;
 }
 
-/* Cards display - enhanced for better wrapping on projects page */
-.cards{
+.mid-bottom-body p {
+    color: #1f2937;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Blue call-to-action box */
+.bottom-body {
+    background-color: #f9faf8;
+    padding: 50px 0;
+}
+
+.blueBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 24px;
+    color: #f9faf8;
+    font-weight: 900;
+    background-color: #3882f6;
+    margin: 0 auto;
+    max-width: 700px;
+    border-radius: 10px;
+    padding: 50px 100px;
+    gap: 20px;
+}
+
+/* --------------------------------------
+ * CARD STYLES - BASE
+ * --------------------------------------
+ */
+/* Base card layout that applies to ALL cards */
+.cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-left:300px;
-    margin-right:300px;
 }
 
-/* Original card styling preserved for homepage */
-.mid-top-body .card{
+/* --------------------------------------
+ * HOMEPAGE CARD STYLES
+ * --------------------------------------
+ */
+/* Homepage-specific card container */
+.mid-top-body .cards {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* Homepage card styling */
+.mid-top-body .card {
     display: flex;
-    flex-flow:column wrap;
-    outline-style:dotted;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;  /* Fixed width for consistent sizing */
+    outline-style: dotted;
     outline-width: 7px;
     outline-color: #3882f6;
-    align-items: center;
-    margin: 0px 10px 30px 10px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Keeps rounded corners for image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-/* Enhanced card styling for projects page */
-#github-repos-container .card {
+.mid-top-body .card:hover {
+    transform: scale(1.05);
+}
+
+/* Homepage card images - FIXED SIZING */
+.mid-top-body .card img {
+    width: 100%;    
+    height: 200px;  /* Fixed height for all homepage images */
+    object-fit: cover;  /* Maintains aspect ratio but fills space */
+    object-position: center; /* Centers the image within the container */
+    border-bottom: 2px solid #3882f6;
+}
+
+/* --------------------------------------
+ * PROJECT PAGE CARD STYLES
+ * --------------------------------------
+ */
+/* GitHub repos container */
+#github-repos-container, 
+#archived-repos-container {
+    background-color: #E5E7EB;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+#github-repos-container > h2,
+#archived-repos-container > h2 {
+    color: #1f2937;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* GitHub repos card container */
+#github-repos-container .cards,
+#archived-repos-container .cards {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* GitHub repository card styling */
+#github-repos-container .card,
+#archived-repos-container .card {
     display: flex;
     flex-direction: column;
     outline-style: dotted;
@@ -72,218 +238,49 @@ body{
     padding: 15px;
     width: 220px;
     height: 280px; /* Fixed height for all cards */
-    background-color: #f9faf8; /* Light background instead of dark */
+    background-color: #f9faf8;
     transition: transform 0.3s ease;
-    border-radius: 8px; /* Rounded corners for better visual distinction */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    position: relative; /* For content positioning */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-#github-repos-container .card:hover {
+#github-repos-container .card:hover,
+#archived-repos-container .card:hover {
     transform: scale(1.05);
 }
 
-/* Create a circular light background for the GitHub logo */
-#github-repos-container .card img {
+/* GitHub logo styling */
+#github-repos-container .card img,
+#archived-repos-container .card img {
     background-color: white;
     border-radius: 50%;
     padding: 10px;
     border: 2px solid #3882f6;
     margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
-/* Style the repository name link with better contrast */
-#github-repos-container .card a.button {
-    background-color: #3882f6;
-    color: white;
-    padding: 8px 16px;
-    margin: 10px 0;
-    font-weight: bold;
-    border-radius: 4px;
-    text-align: center;
-}
-
-/* Improve repository description visibility */
-#github-repos-container .card p {
-    color: #1f2937; /* Dark text on light background */
+/* GitHub repo description */
+#github-repos-container .card p,
+#archived-repos-container .card p {
+    color: #1f2937;
     padding: 0 10px;
     text-align: center;
     font-size: 14px;
     margin: 8px 0;
-    /* Fixed height description container with overflow handling */
     height: 70px;
-    overflow: auto; /* Allow scrolling for longer descriptions */
+    overflow: auto;
     width: 100%;
-    /* Ensure proper spacing in fixed-height card */
     box-sizing: border-box;
 }
 
-.mid-bottom-body{
-    background-color: #E5E7EB;
-}
-
-blockquote{
-    font-size: 36px;
-    font-style:italic;
-    font-weight: lighter;
-    color: #1f2937;
-    margin-left:350px;
-    margin-right:350px;
-}
-
-.bottom-body{
-    background-color: #f9faf8;
-}
-
-.blueBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 24px;
-    color: #f9faf8;
-    font-weight: 900;
-    background-color: #3882f6;
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 5px;
-    padding: 50px 100px;
-    gap: 20px;
-}
-
-.footer{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color: #f9faf8;
-    padding: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: #E5E7EB;
-    font-size: 18px;
-    padding: 10px;
-}
-
-p {
-    color: #E5E7EB;
-    font-size: 18px;
-}
-
-button {
-    background-color: #3882f6;
-    color: #E5E7EB;
-    border-radius: 5px;
-    border: 10px;
-    padding: 5px 10px;
-}
-
-.sign-up{
-    display: flex;
-    outline: auto;
-    outline-color: #f9faf8;
-    justify-self: right;
-}
-
-.socials{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 25px;
-}
-
-.social{
-    align-items: center;
-    display: flex;
-    outline: auto;
-    outline-color: #f9faf8;
-    justify-self: center;
-}
-
-.image {
-    display: block;
-    flex-direction: column wrap;
-    font-size: 11px;
-    margin-right:100px;
-    border-radius: 10%;
-}
-
-a.button{
-    padding: 1px 6px;
-    border: 1px outset #f9faf8;
-    border-radius: 5px;
-    background-color: #3882f6;
-    color: #E5E7EB;
-    text-decoration: none;
-}
-
-/* GitHub Repositories Container Styles */
-#github-repos-container {
-    background-color: #E5E7EB;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px auto;
-    max-width: 1200px;
-}
-
-#github-repos-container > h2 {
-    color: #1f2937;
-    text-align: center;
-    margin-top: 0;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 1200px) {
-    .cards {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-    
-    blockquote {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-    
-    .blueBox {
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .cards {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    
-    .top-body {
-        flex-direction: column;
-        margin: 50px 20px;
-        align-items: center;
-    }
-    
-    .image {
-        margin-right: 0;
-        margin-top: 30px;
-    }
-    
-    blockquote {
-        margin-left: 50px;
-        margin-right: 50px;
-        font-size: 24px;
-    }
-    
-    .blueBox {
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 30px 20px;
-    }
-}
-
-/* Style for the highlighted project section */
+/* --------------------------------------
+ * HIGHLIGHTED PROJECT STYLES
+ * --------------------------------------
+ */
 .highlighted-project {
     background-color: #3882f6;
     margin: 40px auto;
@@ -306,4 +303,162 @@ a.button{
 .highlighted-project ul {
     color: #E5E7EB;
     padding-left: 20px;
+}
+
+/* --------------------------------------
+ * BUTTON & LINK STYLES
+ * --------------------------------------
+ */
+button {
+    background-color: #3882f6;
+    color: #E5E7EB;
+    border-radius: 5px;
+    border: 10px;
+    padding: 5px 10px;
+}
+
+a.button {
+    padding: 8px 16px;
+    border: 1px outset #f9faf8;
+    border-radius: 5px;
+    background-color: #3882f6;
+    color: #E5E7EB;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.sign-up {
+    display: flex;
+    outline: auto;
+    outline-color: #f9faf8;
+    justify-self: right;
+}
+
+/* --------------------------------------
+ * SOCIAL MEDIA SECTION
+ * --------------------------------------
+ */
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 25px;
+}
+
+.social {
+    align-items: center;
+    display: flex;
+    outline: auto;
+    outline-color: #f9faf8;
+    justify-self: center;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* --------------------------------------
+ * FOOTER STYLES
+ * --------------------------------------
+ */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9faf8;
+    padding: 20px 0;
+    background-color: #1f2937;
+}
+
+/* --------------------------------------
+ * RESPONSIVE STYLES
+ * --------------------------------------
+ */
+/* Large screens */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .blueBox {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 40px 60px;
+    }
+    
+    blockquote {
+        max-width: 700px;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .top-body {
+        margin: 50px 0;
+        font-size: 36px;
+    }
+    
+    .blueBox {
+        padding: 30px 40px;
+    }
+    
+    blockquote {
+        font-size: 30px;
+        max-width: 600px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .top-body {
+        margin: 30px 0;
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    /* Stack cards vertically on mobile */
+    .mid-top-body .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mid-top-body .card {
+        width: 280px;
+        margin-bottom: 20px;
+    }
+    
+    blockquote {
+        font-size: 24px;
+        padding: 0 20px;
+    }
+    
+    .blueBox {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    /* Adjust GitHub card layout for mobile */
+    #github-repos-container .cards,
+    #archived-repos-container .cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
