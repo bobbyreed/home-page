@@ -79,6 +79,11 @@ async function loadGitHubRepoTiles(username, containerId) {
     // Clear container
     container.innerHTML = '';
     
+    // Create a heading for the repositories section
+    const heading = document.createElement('h2');
+    heading.textContent = 'My GitHub Repositories';
+    container.appendChild(heading);
+    
     // Create a container for the cards with similar styling to your homepage cards
     const cardsContainer = document.createElement('div');
     cardsContainer.className = 'cards';

@@ -358,7 +358,6 @@ blockquote::before {
     max-width: 1200px;
 }
 
-/* Adjust card properties for repository tiles */
 .card {
     display: flex;
     flex-direction: column;
@@ -371,21 +370,49 @@ blockquote::before {
     min-width: 150px;
     max-width: 250px;
     min-height: 200px;
-    background-color: #1f2937;
+    background-color: #f9faf8; /* Light background instead of dark */
     transition: transform 0.3s ease;
+    border-radius: 8px; /* Rounded corners for better visual distinction */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 .card:hover {
     transform: scale(1.05);
 }
 
-/* Style for the highlighted project section */
+.card img {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid #3882f6;
+    margin-bottom: 10px;
+}
+
+.card a.button {
+    background-color: #3882f6;
+    color: white;
+    padding: 8px 16px;
+    margin: 10px 0;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card p {
+    color: #1f2937; /* Dark text on light background */
+    padding: 0 10px;
+    text-align: center;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
 .highlighted-project {
     background-color: #3882f6;
     margin: 40px auto;
     padding: 20px 30px;
     border-radius: 5px;
     max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .highlighted-project h2 {
@@ -403,7 +430,6 @@ blockquote::before {
     padding-left: 20px;
 }
 
-/* Add footer to all pages for consistency */
 .footer {
     display: flex;
     justify-content: center;
@@ -412,4 +438,18 @@ blockquote::before {
     padding: 10px;
     margin-top: auto;
     background-color: #1f2937;
+}
+
+#github-repos-container {
+    background-color: #E5E7EB;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+#github-repos-container > h2 {
+    color: #1f2937;
+    text-align: center;
+    margin-top: 0;
 }
