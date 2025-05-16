@@ -347,3 +347,69 @@ blockquote::before {
     font-size: 1.2rem;
   }
 }
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Adjust card properties for repository tiles */
+.card {
+    display: flex;
+    flex-direction: column;
+    outline-style: dotted;
+    outline-width: 7px;
+    outline-color: #3882f6;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    min-width: 150px;
+    max-width: 250px;
+    min-height: 200px;
+    background-color: #1f2937;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Style for the highlighted project section */
+.highlighted-project {
+    background-color: #3882f6;
+    margin: 40px auto;
+    padding: 20px 30px;
+    border-radius: 5px;
+    max-width: 800px;
+}
+
+.highlighted-project h2 {
+    color: #f9faf8;
+    margin-top: 0;
+}
+
+.highlighted-project p, 
+.highlighted-project a {
+    color: #E5E7EB;
+}
+
+.highlighted-project ul {
+    color: #E5E7EB;
+    padding-left: 20px;
+}
+
+/* Add footer to all pages for consistency */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9faf8;
+    padding: 10px;
+    margin-top: auto;
+    background-color: #1f2937;
+}
