@@ -37,21 +37,19 @@ function createRepoTile(repo) {
     link.target = '_blank'; // Open in new tab
     
     // Create description paragraph if available
-    let description = null;
+    let description = document.createElement('p');
     if (repo.description) {
-        description = document.createElement('p');
         description.textContent = repo.description;
-        description.style.padding = '0 10px';
-        description.style.textAlign = 'center';
-        description.style.fontSize = '14px';
+    } else {
+        description.textContent = "No description available";
+        description.style.fontStyle = "italic";
+        description.style.color = "#666";
     }
     
     // Add elements to card
     card.appendChild(img);
     card.appendChild(link);
-    if (description) {
-        card.appendChild(description);
-    }
+    card.appendChild(description);
     
     return card;
 }

@@ -69,13 +69,13 @@ body{
     align-items: center;
     margin: 10px;
     padding: 15px;
-    min-width: 150px;
-    max-width: 250px;
-    min-height: 200px;
+    width: 220px;
+    height: 280px; /* Fixed height for all cards */
     background-color: #f9faf8; /* Light background instead of dark */
     transition: transform 0.3s ease;
     border-radius: 8px; /* Rounded corners for better visual distinction */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    position: relative; /* For content positioning */
 }
 
 #github-repos-container .card:hover {
@@ -109,6 +109,12 @@ body{
     text-align: center;
     font-size: 14px;
     margin: 8px 0;
+    /* Fixed height description container with overflow handling */
+    height: 70px;
+    overflow: auto; /* Allow scrolling for longer descriptions */
+    width: 100%;
+    /* Ensure proper spacing in fixed-height card */
+    box-sizing: border-box;
 }
 
 .mid-bottom-body{
