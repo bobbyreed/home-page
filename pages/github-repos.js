@@ -9,16 +9,17 @@ async function fetchGitHubRepos(username) {
         }
         
         const repos = await response.json();
-        let archived = repo;
+        
         // Filter out archived repositories
         const nonArchivedRepos = repos.filter(repo => !repo.archived);
         // Create list of archived repos
-        const archivedRepos = repos.filter(archived => archived.archived);
+        const archivedRepos = repos.filter(repo => repo.archived);
         
-        return nonArchivedRepos, archivedRepos;
+        // Return both arrays as an object
+        return { nonArchivedRepos, archivedRepos };
     } catch (error) {
         console.error('Error fetching GitHub repositories:', error);
-        return [];
+        return { nonArchivedRepos: [], archivedRepos: [] };
     }
 }
 
@@ -73,7 +74,10 @@ async function loadGitHubRepoTiles(username, containerId) {
     container.innerHTML = '<p>Loading repositories...</p>';
     
     // Fetch repositories
-    const repos = await fetchGitHubRepos(username);
+    const { nonArchivedRepos, archivedRepos } = await fetchGitHubRepos(username);
+    
+    // Use the appropriate repo list based on container ID
+    const repos = containerId === 'github-repos-container' ? nonArchivedRepos : archivedRepos;
     
     if (repos.length === 0) {
         container.innerHTML = '<p>No repositories found or there was an error loading them.</p>';
@@ -85,7 +89,7 @@ async function loadGitHubRepoTiles(username, containerId) {
     
     // Create a heading for the repositories section
     const heading = document.createElement('h2');
-    heading.textContent = 'Active GitHub Repositories';
+    heading.textContent = containerId === 'github-repos-container' ? 'Active GitHub Repositories' : 'Archived GitHub Repositories';
     container.appendChild(heading);
     
     // Create a container for the cards with similar styling to your homepage cards
