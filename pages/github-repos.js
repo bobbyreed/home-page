@@ -9,11 +9,11 @@ async function fetchGitHubRepos(username) {
         }
         
         const repos = await response.json();
-        
+        let archived = repo;
         // Filter out archived repositories
         const nonArchivedRepos = repos.filter(repo => !repo.archived);
         // Create list of archived repos
-        const archivedRepos = repos.filter(repos => repo.archived);
+        const archivedRepos = repos.filter(archived => archived.archived);
         
         return nonArchivedRepos, archivedRepos;
     } catch (error) {
