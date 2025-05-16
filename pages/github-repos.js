@@ -12,8 +12,10 @@ async function fetchGitHubRepos(username) {
         
         // Filter out archived repositories
         const nonArchivedRepos = repos.filter(repo => !repo.archived);
+        // Create list of archived repos
+        const archivedRepos = repos.filter(repos => repo.archived);
         
-        return nonArchivedRepos;
+        return nonArchivedRepos, archivedRepos;
     } catch (error) {
         console.error('Error fetching GitHub repositories:', error);
         return [];
@@ -83,7 +85,7 @@ async function loadGitHubRepoTiles(username, containerId) {
     
     // Create a heading for the repositories section
     const heading = document.createElement('h2');
-    heading.textContent = 'My GitHub Repositories';
+    heading.textContent = 'Active GitHub Repositories';
     container.appendChild(heading);
     
     // Create a container for the cards with similar styling to your homepage cards
@@ -102,4 +104,5 @@ async function loadGitHubRepoTiles(username, containerId) {
 document.addEventListener('DOMContentLoaded', () => {
     // Replace 'bobbyreed' with your GitHub username if different
     loadGitHubRepoTiles('bobbyreed', 'github-repos-container');
+    loadGitHubRepoTiles('bobbyreed', 'archived-repos-container');
 });
