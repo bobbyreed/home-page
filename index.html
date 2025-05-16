@@ -3,62 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./styles.css">
     <script src="./app.js" defer></script>
     <title>bobby reed</title>
 </head>
 <body>
-    <div class="header">
-        <p>bobby reed</p>
-        <div class="links">
-            <a href="./pages/projects.html">projects</a>
-            <a href="./pages/resume.html">resume</a>
-        </div>
-    </div>
-    <div class="middle">
-    <div class="top-body">
-        <div class="block">
-        This website is mostly for bobby and his collaborators.
-        <p>If you find yourself here, welcome. This rabbit hole may contain things that interest you. That is not bobby's concern.</p>
-        <a href="/pages/why.html" class="button">Sign Up for My Mailing List!</a>
-        </div>
-        <div class="image">
-            <img src="./images/actorbobby.jpg" width="200" height=auto alt="The actor bobby reed. Not the guy who made this website.">
-            <p>This is not the bobby reed who created and maintained this site, but is Bobby Reed the actor.</p>
-        </div>
-    </div>
-    <div class="mid-top-body">
-        <h1>I like to...</h1>
-        <div class="cards">
-            <div class="card"><img src="./images/skate.jpeg" h="100" height="100"><a href="/pages/skate.html" class="button">Skate</a></div>
-            <div class="card"><img src="./images/make.jpeg" width="100" height="100"><a href="/pages/projects.html" class="button">Make</a></div>
-            <div class="card"><img src="./images/relate.jpeg" width="100" height="100"><a href="/pages/relate.html" class="button">Relate</a></div>
-            <div class="card"><img src="./images/shake.jpg" width="100" height="100"><a href="/pages/shake.html" class="button">Shake</a></div>
-        </div>
-    </div>
-    <div class="mid-bottom-body">
-        <blockquote>
-            This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.
-        </blockquote>
-        <p style="color: black; font-weight: bold; text-align: end; margin-right: 380px;">-Thor, God of Thunder</p>
-    </div>
-    <div class="bottom-body">
-        <div class="blueBox">
-            My presence on sites:
-            <div class="socials">
-                <div class="social"><a href="http://www.github.com/bobbyreed/"><img src="./images/github-mark.svg" width="100" height="100"></a></div>
-                <div class="social"><a href="https://www.okcu.edu/faculty/bobby-reed-m-s"><img src="images/ocu.png" width="100" height="100"></a></div>
-                <div class="social"><a href="https://www.devlimited.org/"><img src="https://static.wixstatic.com/media/d3a65d_2aa8bc161502443fbd00528aecaee6f7~mv2.png/v1/fill/w_72,h_66,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/hires.png" width="100" height="100"></a></div>
+    <header class="header">
+        <div class="container">
+            <p>bobby reed</p>
+            <div class="links">
+                <a href="./pages/projects.html">projects</a>
+                <a href="./pages/resume.html">resume</a>
             </div>
-            <a href="./pages/why.html" class="button">Sign up for my Newsletter!</a>
         </div>
-
-    </div>
-    </div>
-    <div class="footer">
-        Copyright bobby reed
-    </div>
+    </header>
+    
+    <main class="middle">
+        <section class="top-body">
+            <div class="container">
+                <div class="block">
+                    <h1>Creating chaos and digital experiences</h1>
+                    <p>This website is mostly for bobby and his collaborators. If you find yourself here, welcome. This rabbit hole may contain things that interest you.</p>
+                    <a href="/pages/why.html" class="button">Join the adventure</a>
+                </div>
+                <div class="image">
+                    <img src="./images/actorbobby.jpg" alt="The actor bobby reed. Not the guy who made this website.">
+                    <p>This is not the bobby reed who created this site, but is Bobby Reed the actor.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mid-top-body">
+            <div class="container">
+                <h1>I like to...</h1>
+                <div class="cards">
+                    <div class="card">
+                        <img src="./images/skate.jpeg" alt="Skateboarding">
+                        <a href="/pages/skate.html" class="button">Skate</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/make.jpeg" alt="Making things">
+                        <a href="/pages/projects.html" class="button">Make</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/relate.jpeg" alt="Relating with others">
+                        <a href="/pages/relate.html" class="button">Relate</a>
+                    </div>
+                    <div class="card">
+                        <img src="./images/shake.jpg" alt="Shaking things up">
+                        <a href="/pages/shake.html" class="button">Shake</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mid-bottom-body">
+            <div class="container">
+                <blockquote>
+                    This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.
+                </blockquote>
+                <p>-Thor, God of Thunder</p>
+            </div>
+        </section>
+        
+        <section class="bottom-body">
+            <div class="container">
+                <div class="blueBox">
+                    <h2>My presence on sites:</h2>
+                    <div class="socials">
+                        <div class="social">
+                            <a href="http://www.github.com/bobbyreed/">
+                                <img src="./images/github-mark.svg" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.okcu.edu/faculty/bobby-reed-m-s">
+                                <img src="images/ocu.png" alt="Oklahoma City University">
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.devlimited.org/">
+                                <img src="https://static.wixstatic.com/media/d3a65d_2aa8bc161502443fbd00528aecaee6f7~mv2.png/v1/fill/w_72,h_66,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/hires.png" alt="DEV Limited">
+                            </a>
+                        </div>
+                    </div>
+                    <a href="./pages/why.html" class="button">Sign up for my Newsletter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright bobby reed</p>
+        </div>
+    </footer>
 </body>
 </html>
