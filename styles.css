@@ -1,6 +1,6 @@
 /* --------------------------------------
- * BOBBY REED PERSONAL WEBSITE STYLES
- * Last updated: May 15, 2025
+ * PERSONAL WEBSITE STYLES
+ * Last updated: September 4, 2025
  * --------------------------------------
  */
 
@@ -12,10 +12,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    background-color: #1f2937;
+    background-color: #dbe5f3;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Pixely', Arial, sans-serif;
 }
 
 /* Container for consistent section widths */
@@ -39,6 +39,17 @@ a {
     font-size: 18px;
     padding: 10px;
 }
+/* --------------------------------------
+ * FONTS
+ * --------------------------------------
+ */
+     @font-face {
+        font-family: 'Pixely';
+        src: url('fonts/PixelatedEleganceRegular-ovyAA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
 
 /* --------------------------------------
  * HEADER STYLES
@@ -143,6 +154,7 @@ blockquote {
     border-radius: 10px;
     padding: 50px 100px;
     gap: 20px;
+    
 }
 
 /* --------------------------------------
@@ -196,6 +208,7 @@ blockquote {
     object-fit: cover;  /* Maintains aspect ratio but fills space */
     object-position: center; /* Centers the image within the container */
     border-bottom: 2px solid #3882f6;
+    
 }
 
 /* --------------------------------------
@@ -328,6 +341,7 @@ a.button {
     font-weight: bold;
     display: inline-block;
     margin-top: 10px;
+    box-shadow: 10px 5px 5px red;
 }
 
 .sign-up {
