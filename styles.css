@@ -85,6 +85,10 @@ a {
     display: block;
 }
 
+.selector ~ p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 /* Top hero section */
 .top-body {
     display: flex;
