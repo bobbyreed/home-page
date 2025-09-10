@@ -87,6 +87,7 @@ a {
 
 .selector ~ p {
     font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
 }
 
 /* Top hero section */
@@ -96,7 +97,6 @@ a {
     font-size: 48px;
     color: #f9faf8;
     font-weight: 900;
-    margin: 100px 0;
 }
 
 .top-body h1 {
@@ -192,7 +192,7 @@ blockquote {
     width: 220px;  /* Fixed width for consistent sizing */
     outline-style: dotted;
     outline-width: 7px;
-    outline-color: #3882f6;
+    outline-color: #000000;
     margin-bottom: 30px;
     background-color: white;
     border-radius: 8px;
@@ -222,7 +222,7 @@ blockquote {
 /* GitHub repos container */
 #github-repos-container, 
 #archived-repos-container {
-    background-color: #E5E7EB;
+    background-color: #739df3;
     padding: 20px;
     border-radius: 8px;
     margin: 20px auto;
@@ -450,7 +450,6 @@ a.button {
     }
     
     .top-body {
-        margin: 30px 0;
         font-size: 28px;
         text-align: center;
     }
