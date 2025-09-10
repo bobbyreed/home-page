@@ -190,7 +190,7 @@ blockquote {
     flex-direction: column;
     align-items: center;
     width: 220px;  /* Fixed width for consistent sizing */
-    outline-style: dotted;
+    outline-style: groove;
     outline-width: 7px;
     outline-color: #000000;
     margin-bottom: 30px;
