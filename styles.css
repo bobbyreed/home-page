@@ -80,6 +80,9 @@ a {
     color: aliceblue;
     text-align: center;
 }
+h2{
+    position: sticky;
+}
 
 .block {
     display: block;
