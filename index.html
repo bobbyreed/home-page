@@ -27,7 +27,6 @@
         <section class="top-body">
             <div class="container">
                 <div class="block">
-                    <h1 class="selector">Creating chaos and digital experiences</h1>
                     <p>This website is mostly for bobby and his collaborators. If you find yourself here, welcome. This
                         rabbit hole may contain things that interest you.</p>
                 </div>
@@ -65,16 +64,8 @@
                 </blockquote>
                 <p>-manchester orchestra</p>
             </div>
-            <div class="form">
+            <div class="container form">
                 <form action="" method="POST">
-                    <label style="color: black;" for="email">What's your email?</label>
-                    <input type="email" name="email" id="email" placeholder="Your email" required>
-                    <p>
-                        <div>
-                            <input type="radio" id="consent" name="consent" value="yes" required>
-                            <label for="consent" style="color: black;">I consent to giving up my personal data</label>
-                        </div>
-                    </p>
                     <fieldset>
                         <legend style="color: black;">Personal Information</legend>
                         <p>I identify as...</p>
@@ -93,14 +84,26 @@
                         <input type="number" name="zip" id="zip" placeholder="Zip Code" required>
                         <input type="password" name="ssn" id="ssn" placeholder="SSN" required><br>
                     </fieldset>
+                    <fieldset>
+                        <legend style="color: black;">Consent</legend>
+                        <label style="color: black;" for="email">What's your email?</label>
+                        <input type="email" name="email" id="email" placeholder="Your email" required>
+                        <p>
+                            <div>
+                                <input type="radio" id="consent" name="consent" value="yes" required>
+                                <label for="consent" style="color: black;">I consent to giving up my personal data</label>
+                            </div>
+                        </p>
                     <label type="dropdown" for="understanding" style="color: black;">Do you understand you are giving up personal information with no assurance that something awful won't be done with it?</label>
                     <select name="understanding" id="understanding" required>
                         <option value="plea" disabled selected>Please pick the right one... </option>
                         <option value="hope">I understand, but am a madlad</option>
                         <option value="despair">I do not understand and charge forward anyway.</option>
-                    <button type="submit">Volunteer Data</button>
-                    <button type="reset" class="button">Reset</button>
-                    <button type="button" class="button" onclick="alert('You really should not do this.');">Do Not Click</button>
+                    </select>
+                    </fieldset>
+                        <button type="submit">Volunteer Data</button>
+                        <button type="reset" class="button">Reset</button>
+                        <button type="button" class="button" onclick="alert('You really should not do this.');">Do Not Click</button>
                     </form>
                     
             </div>
