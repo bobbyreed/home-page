@@ -65,6 +65,45 @@
                 </blockquote>
                 <p>-manchester orchestra</p>
             </div>
+            <div class="form">
+                <form action="" method="POST">
+                    <label style="color: black;" for="email">What's your email?</label>
+                    <input type="email" name="email" id="email" placeholder="Your email" required>
+                    <p>
+                        <div>
+                            <input type="radio" id="consent" name="consent" value="yes" required>
+                            <label for="consent" style="color: black;">I consent to giving up my personal data</label>
+                        </div>
+                    </p>
+                    <fieldset>
+                        <legend style="color: black;">Personal Information</legend>
+                        <p>I identify as...</p>
+                        <div>
+                            <input type="checkbox" id="male" name="gender" value="male">
+                            <label for="male" style="color: black">Male</label>
+                            <input type="checkbox" id="female" name="gender" value="female">
+                            <label for="female" style="color: black">Female</label>
+                            <input type="checkbox" id="nonbinary" name="gender" value="nonbinary">
+                            <label for="nonbinary" style="color: black">Non-binary</label>
+                        </div>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                        <input type="number" name="age" id="age" placeholder="Age" required>
+                        <input type="date" name="birthdate" id="birthdate" placeholder="Birthdate" required>
+                        <input type="number" name="zip" id="zip" placeholder="Zip Code" required>
+                        <input type="password" name="ssn" id="ssn" placeholder="SSN" required><br>
+                    </fieldset>
+                    <label type="dropdown" for="understanding" style="color: black;">Do you understand you are giving up personal information with no assurance that something awful won't be done with it?</label>
+                    <select name="understanding" id="understanding" required>
+                        <option value="plea" disabled selected>Please pick the right one... </option>
+                        <option value="hope">I understand, but am a madlad</option>
+                        <option value="despair">I do not understand and charge forward anyway.</option>
+                    <button type="submit">Volunteer Data</button>
+                    <button type="reset" class="button">Reset</button>
+                    <button type="button" class="button" onclick="alert('You really should not do this.');">Do Not Click</button>
+                    </form>
+                    
+            </div>
         </section>
 
         <section class="bottom-body">

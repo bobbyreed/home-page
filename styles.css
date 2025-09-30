@@ -217,6 +217,20 @@ blockquote {
     border-bottom: 2px solid #3882f6;
     
 }
+/* --------------------------------------
+ * Form Styles
+ * --------------------------------------
+ */
+ .form {
+    display: block;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border: #000000 solid 5px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+ }
 
 /* --------------------------------------
  * PROJECT PAGE CARD STYLES
@@ -336,6 +350,7 @@ button {
     border-radius: 5px;
     border: 10px;
     padding: 5px 10px;
+    order: 1;
 }
 
 a.button {
