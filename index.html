@@ -81,8 +81,8 @@
                         <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
                         <input type="number" name="age" id="age" placeholder="Age" required>
                         <input type="date" name="birthdate" id="birthdate" placeholder="Birthdate" required>
-                        <input type="number" name="zip" id="zip" placeholder="Zip Code" required>
-                        <input type="password" name="ssn" id="ssn" placeholder="SSN" required><br>
+                        <input type="number" name="zip" id="zip" placeholder="Zip Code" pattern="(\d{5}([\-]\d{4})?)" required>
+                        <input type="password" name="ssn" id="ssn" placeholder="SSN" required minlength="9" maxlength="9"><br>
                     </fieldset>
                     <fieldset>
                         <legend style="color: black;">Consent</legend>
