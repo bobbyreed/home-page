@@ -59,17 +59,11 @@ a {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    background-color: #1f2937;
-    font-size: 24px;
-    color: #f9faf8;
-    padding: 20px 0;
+    align-items:center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: antiquewhite;
 }
-
-.header .links {
-    display: flex;
-    gap: 10px;
-}
-
 /* --------------------------------------
  * MAIN CONTENT SECTIONS
  * --------------------------------------
